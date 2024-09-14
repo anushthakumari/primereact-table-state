@@ -1,10 +1,7 @@
 import { useState, useEffect, useCallback, useRef, FormEvent } from "react";
-import {
-	DataTable,
-	DataTableSelectionChangeParams,
-} from "primereact/datatable";
+import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import { Paginator, PaginatorPageChangeParams } from "primereact/paginator";
+import { Paginator } from "primereact/paginator";
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import { InputNumber } from "primereact/inputnumber";
@@ -83,7 +80,7 @@ export default function BasicDemo() {
 		[]
 	);
 
-	const onPageChange = (event: PaginatorPageChangeParams) => {
+	const onPageChange = (event: any) => {
 		const newPage = event.page + 1;
 		const limit = event.rows;
 
@@ -117,7 +114,7 @@ export default function BasicDemo() {
 		op.current?.toggle(e); //closing the toggle right after selection
 	};
 
-	const handleSelectionChange = (e: DataTableSelectionChangeParams) => {
+	const handleSelectionChange = (e: any) => {
 		selectedRowsRef.current = e.value as Artwork[];
 		setSelectedRows(e.value as Artwork[]);
 	};
