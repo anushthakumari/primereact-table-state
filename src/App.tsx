@@ -106,7 +106,7 @@ export default function BasicDemo() {
 			}
 
 			//fill the space
-			selectedItems[index] = arts.at(index) as Artwork;
+			selectedItems[index] = arts[index] as Artwork;
 		}
 
 		setSelectedRows(selectedItems);
